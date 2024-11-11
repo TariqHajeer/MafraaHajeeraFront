@@ -1,0 +1,18 @@
+<div class="card dir-rtl">
+  <div></div>
+  <p-table
+    [value]="(entries$ | async) || []"
+    [tableStyle]="{ 'min-width': '50rem' }"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>اسم المحافظة</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-entry>
+      <tr>
+        <td>{{ entry.name }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
